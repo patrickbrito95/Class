@@ -1,0 +1,56 @@
+/* SUN STYLES */
+
+.sun-left, .sun-right {
+    color: orange;
+}
+
+.sun-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.sun-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.summer {
+    background-color: rgb(255, 200, 156);
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   font-size: 50px;
+}
+
+/* SNOWFLAKES STYLES */
+
+.snow-left, .snow-right {
+    color: lightblue;
+}
+
+.snow-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.snow-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.winter {
+    background-color: rgb(208, 247, 248);
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   font-size: 50px;
+}
+
+
+

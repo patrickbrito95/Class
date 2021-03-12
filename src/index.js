@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import SeasonDisplay from "./SeasonDisplay";
+import Spinner from "./Spinner";
 
 class App extends React.Component {
   constructor(props) {
@@ -25,8 +26,10 @@ class App extends React.Component {
     console.log("My component was just updated - it rerendered!");
   }
 
-  // O React diz: Precisamos definir o 'render()'!!
-  render() {
+
+// Foi criada essa função 'renderComponents()' para organizar e evitar ter condicionais dentro do render() 
+
+  renderComponents(){
     if (this.state.errMessage && !this.state.lat) {
       return <h1>Error: {this.state.errMessage}</h1>;
     }
@@ -36,8 +39,18 @@ class App extends React.Component {
     }
 
     if (!this.state.lat && !this.state.errMessage) {
-      return <h1>Loading...</h1>;
+      return <Spinner message="Solicitando sua localização..." />;
     }
+  }
+  
+// Dentro do render, foi chamado o 'this.renderComponents()' para renderizar toda lógica feita através da função
+
+  render() {
+    return (
+      <>
+      {this.renderComponents()}
+      </>
+    )
   }
 }
 ReactDOM.render(<App />, document.querySelector("#root"));
